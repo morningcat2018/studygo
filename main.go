@@ -1,7 +1,7 @@
 package main
 
 import (
-	"studygo/closure_demo"
+	"studygo/array_demo"
 )
 
 func main() {
@@ -10,5 +10,7 @@ func main() {
 	// time_demo.Time2()
 	// base.StringDemo5()
 
-	closure_demo.TestClosure()
+	// closure_demo.TestClosure()
+
+	array_demo.ArrayDemo6()
 }

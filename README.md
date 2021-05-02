@@ -8,4 +8,6 @@
 
 > ./studygo
 
+or
 
+> go run main.go
