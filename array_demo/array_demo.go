@@ -53,3 +53,20 @@ func ArrayDemo6() {
 		fmt.Println(v)
 	}
 }
+
+// 数组是值类型 赋值和传参时会复制整个数组 因此改变副本的值不会改变本身的值
+// 切片为引用类型
+
+func ArrayDemo7() {
+	arr := [5]int{1, 2, 3, 4, 5}
+	var arr2 [5]int
+	arr2 = arr
+	arr2[1] = 200
+	fmt.Println(arr)
+	fmt.Println(arr2)
+}
+
+func ArrayDemo8() [5]int {
+	arr := [5]int{1, 2, 3, 4, 5}
+	return arr
+}

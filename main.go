@@ -2,6 +2,7 @@ package main
 
 import (
 	"studygo/array_demo"
+	"studygo/slice_demo"
 )
 
 func main() {
@@ -12,5 +13,7 @@ func main() {
 
 	// closure_demo.TestClosure()
 
-	array_demo.ArrayDemo6()
+	array_demo.ArrayDemo8()
+
+	slice_demo.SliceDemo()
 }
