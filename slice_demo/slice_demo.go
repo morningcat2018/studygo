@@ -19,6 +19,10 @@ func SliceDemo() {
 	printIntSlice("arr", arr)
 }
 
+func printIntSlice0(arr []int) {
+	printIntSlice("name", arr)
+}
+
 func printIntSlice(name string, arr []int) {
 	fmt.Println(arr)
 	fmt.Printf("%s ->len=%d cap=%d\n", name, len(arr), cap(arr)) // 长度  容量

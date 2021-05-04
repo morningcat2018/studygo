@@ -15,5 +15,5 @@ func main() {
 
 	array_demo.ArrayDemo8()
 
-	slice_demo.SliceDemo4()
+	slice_demo.SliceCopyDemo1()
 }
