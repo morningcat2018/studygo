@@ -6,7 +6,7 @@ import "fmt"
 func PointerDemo1() {
 	var x = 123
 	fmt.Println(&x)
-	var xPointer *int = &x
+	var xPointer *int = &x // int 类型指针
 	fmt.Println(xPointer)
 
 	var y = *xPointer
@@ -14,7 +14,9 @@ func PointerDemo1() {
 }
 
 func PointerDemo2() {
-
+	var a *int
+	*a = 101
+	fmt.Println(*a)
 }
 
 func PointerDemo3() {

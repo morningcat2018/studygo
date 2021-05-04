@@ -18,5 +18,5 @@ func main() {
 
 	slice_demo.SliceAppendDemo5()
 
-	pointer_demo.PointerDemo1()
+	pointer_demo.PointerDemo2()
 }
