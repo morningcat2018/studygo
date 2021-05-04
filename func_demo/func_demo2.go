@@ -25,9 +25,9 @@ func Add4(x, y int) (sum int, err error) {
 	return
 }
 
-// 可变长参数
+// 可变长参数 必须放在参数列表的最后
 func Add5(x ...int) {
-	// x 是一个 []int 类型 即切片类型
+	// x 是一个切片类型 ，[]int
 	sum := 0
 	for _, v := range x {
 		sum += v
