@@ -46,3 +46,5 @@ func MapDemo3() {
 	s2["a"] = []int{1, 2, 3}
 	fmt.Println(s2)
 }
+
+func MapDemo4() {}

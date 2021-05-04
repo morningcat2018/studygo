@@ -2,6 +2,7 @@ package main
 
 import (
 	"studygo/array_demo"
+	"studygo/func_demo"
 	"studygo/map_demo"
 	"studygo/slice_demo"
 )
@@ -18,5 +19,7 @@ func main() {
 
 	slice_demo.SliceAppendDemo5()
 
-	map_demo.MapDemo3()
+	map_demo.MapDemo4()
+
+	func_demo.Add5(1, 2, 4, 6)
 }
