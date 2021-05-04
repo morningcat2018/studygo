@@ -78,3 +78,5 @@ func f5() (x int) {
 	}(x)
 	return 5
 }
+
+func DeferDemo4() {}
