@@ -39,6 +39,19 @@ func SliceAppendDemo3() {
 	printIntSlice0(arr)
 }
 
+// 删除
+func SliceAppendDemo4() {
+	a1 := [...]int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	s1 := a1[:]
+	fmt.Println(s1) // 删除前
+
+	s1 = append(s1[:1], s1[2:]...) // 切片删除索引1的元素
+	fmt.Println(s1)                // 删除后
+	fmt.Println(a1)
+}
+
+func SliceAppendDemo5() {}
+
 // copy 深度拷贝
 // 赋值 浅度拷贝
 func SliceCopyDemo1() {

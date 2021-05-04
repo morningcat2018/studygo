@@ -2,6 +2,7 @@ package main
 
 import (
 	"studygo/array_demo"
+	"studygo/pointer_demo"
 	"studygo/slice_demo"
 )
 
@@ -15,5 +16,7 @@ func main() {
 
 	array_demo.ArrayDemo8()
 
-	slice_demo.SliceCopyDemo1()
+	slice_demo.SliceAppendDemo5()
+
+	pointer_demo.PointerDemo1()
 }
