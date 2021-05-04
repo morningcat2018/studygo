@@ -56,10 +56,57 @@ func ClosureDemo3() {
 	fc5(a)
 }
 
-//////  函数作为出参 闭包
+//////  函数作为出参
 
-func ClosureDemo4() {
-
+func fc6(x func(int, int), m, n int) func() {
+	ret := func() {
+		x(m, n)
+	}
+	return ret
 }
 
+func ClosureDemo4() {
+	var k1 = func(x, y int) {
+		fmt.Println(x + y)
+	}
+	k2 := fc6(k1, 3, 4)
+	k2()
+}
+
+//////  闭包
+// 1. 函数作为出参
+// 2. 函数包含外部作用域的变量
+
+func addN(n int) func(int) int {
+	return func(y int) int {
+		return n + y
+	}
+}
+
+func ClosureDemo5() {
+	var k3 = addN(100) // 得到一个与100相加的函数
+	var sum = k3(245)
+	fmt.Println(sum)
+}
+
+//////  匿名函数
+
+func ClosureDemo6() {
+	// 函数内部无法声明有名称的函数
+	// 可以使用匿名函数
+	var f1 = func(x int, y int) {
+		fmt.Println(x + y)
+	}
+	f1(2, 3)
+
+	// 声明加调用
+	func(x int, y int) {
+		fmt.Println(x + y)
+	}(4, 5)
+}
+
+//////  总结
+
 // 面向函数编程
+
+// 高阶函数 函数可以作为参数和返回值

@@ -22,6 +22,6 @@ func main() {
 	map_demo.MapDemo4()
 
 	// func_demo.Add5(1, 2, 4, 6)
-	func_demo.ClosureDemo4()
+	func_demo.ClosureDemo5()
 
 }
