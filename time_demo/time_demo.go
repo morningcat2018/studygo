@@ -51,6 +51,10 @@ func GetTime(timeString string) time.Time {
 	return t
 }
 
+func GetTimeString(thisTime *time.Time) string {
+	return thisTime.Format(YYYY_MM_DD)
+}
+
 func Time4() {
 	t := time.Now()
 	var one_week time.Duration = 60 * 60 * 24 * 7 * 1e9 // must be in nanosec (1s = 1000000000 ns)

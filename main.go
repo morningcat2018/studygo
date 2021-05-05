@@ -21,6 +21,6 @@ func main() {
 	// func_demo.ClosureDemo5()
 	// func_demo.Demo5Main()
 
-	struct_demo.StructDemo()
+	struct_demo.StructDemo6()
 
 }
