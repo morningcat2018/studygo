@@ -3,7 +3,7 @@ package interface_demo
 import "fmt"
 
 // 空接口
-type blank interface{}
+type blank interface{} // 所有类型都实现了空接口 即所有类型都相当于这种接口类型的变量
 
 // 空接口 作为入参
 func BlankInterfaceDemo1(i interface{}) {
