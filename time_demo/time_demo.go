@@ -6,6 +6,7 @@ import (
 )
 
 const TimeFormat_MINE = "2006-01-02 15:04:05"
+const YYYY_MM_DD = "2006-01-02"
 
 func TimeFormat() {
 	var t time.Time = time.Now()
@@ -39,6 +40,15 @@ func Time3() {
 		return // exit the function on error
 	}
 	printTime(t)
+}
+
+func GetTime(timeString string) time.Time {
+	t, err := time.Parse(YYYY_MM_DD, timeString)
+	if err != nil {
+		panic("时间格式有误")
+	}
+	//fmt.Println(t.Format(YYYY_MM_DD))
+	return t
 }
 
 func Time4() {

@@ -15,7 +15,7 @@ d: 名字中每包含1个'u'或'U'分4枚金币
 var (
 	coins = 50
 	users = []string{
-		"Matthew", "Sarah", "Augustus", "Heidi", "Emilie", "Peter", "Giana", "Adriano", "Aaron", "Elizabeth", "uUu",
+		"Matthew", "Sarah", "Augustus", "Heidi", "Emilie", "Peter", "Giana", "Adriano", "Aaron", "Elizabeth", "love",
 	}
 	distribution = make(map[string]int, len(users))
 )
@@ -28,10 +28,11 @@ func Demo5Main() {
 func dispatchCoin() int {
 	for _, name := range users {
 		coin := calCoin(name)
+		distribution[name] = coin
 		if coin > coins {
+			fmt.Println(distribution)
 			panic("硬币不足")
 		}
-		distribution[name] = coin
 		coins = coins - coin
 	}
 	fmt.Println(distribution)
@@ -41,15 +42,35 @@ func dispatchCoin() int {
 func calCoin(name string) int {
 	var coin = 0
 	for _, sc := range name {
-		if sc == 'e' || sc == 'E' {
-			coin += 1
-		} else if sc == 'i' || sc == 'I' {
-			coin += 2
-		} else if sc == 'o' || sc == 'O' {
-			coin += 3
-		} else if sc == 'u' || sc == 'U' {
-			coin += 4
-		}
+		coin += calCoinDetail2(sc)
+	}
+	return coin
+}
+
+func calCoinDetail(sc rune) int {
+	if sc == 'e' || sc == 'E' {
+		return 1
+	} else if sc == 'i' || sc == 'I' {
+		return 2
+	} else if sc == 'o' || sc == 'O' {
+		return 3
+	} else if sc == 'u' || sc == 'U' {
+		return 4
+	}
+	return 0
+}
+
+func calCoinDetail2(sc rune) int {
+	var coin = 0
+	switch sc {
+	case 'e', 'E':
+		coin = 1
+	case 'i', 'I':
+		coin = 2
+	case 'o', 'O':
+		coin = 3
+	case 'u', 'U':
+		coin = 4
 	}
 	return coin
 }
