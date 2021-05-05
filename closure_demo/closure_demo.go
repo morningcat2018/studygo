@@ -27,3 +27,33 @@ func addOrSubN(n int) (func(y int) int, func(y int) int) {
 	}
 	return addFunc, subFunc
 }
+
+func cal(base int) (func(y int) int, func(y int) int) {
+	addFunc := func(x int) int {
+		base += x // 共享变量
+		return base
+	}
+	subFunc := func(x int) int {
+		base -= x
+		return base
+	}
+	return addFunc, subFunc
+}
+
+func cal2(base int) (func(y int) int, func(y int) int) {
+	addFunc := func(x int) int {
+		return base + x
+	}
+	subFunc := func(x int) int {
+		return base - x
+	}
+	return addFunc, subFunc
+}
+
+func TestClosure2() {
+	add, sub := cal2(10)
+	fmt.Println(add(2), sub(3))
+	fmt.Println(add(3), sub(4))
+}
+
+func TestClosure3() {}
