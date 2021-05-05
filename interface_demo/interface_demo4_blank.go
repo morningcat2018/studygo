@@ -9,3 +9,9 @@ type blank interface{}
 func BlankInterfaceDemo1(i interface{}) {
 	fmt.Println(i)
 }
+
+func BlankInterfaceDemo2(is ...interface{}) {
+	for i, v := range is {
+		fmt.Println(i, v)
+	}
+}

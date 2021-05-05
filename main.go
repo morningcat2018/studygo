@@ -23,5 +23,5 @@ func main() {
 
 	// struct_demo.StructDemo10()
 	// interface_demo.InterfaceDemo1()
-	interface_demo.BlankInterfaceDemo1("world")
+	interface_demo.BlankInterfaceDemo2("hello", "world")
 }
