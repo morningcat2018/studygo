@@ -3,9 +3,9 @@ package main
 import (
 	"studygo/array_demo"
 	"studygo/closure_demo"
+	"studygo/interface_demo"
 	"studygo/map_demo"
 	"studygo/slice_demo"
-	"studygo/struct_demo"
 )
 
 func main() {
@@ -21,6 +21,7 @@ func main() {
 	// func_demo.ClosureDemo5()
 	// func_demo.Demo5Main()
 
-	struct_demo.StructDemo10()
-
+	// struct_demo.StructDemo10()
+	// interface_demo.InterfaceDemo1()
+	interface_demo.BlankInterfaceDemo1("world")
 }
