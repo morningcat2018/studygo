@@ -25,3 +25,8 @@ https://learnku.com/docs/the-way-to-go
 
 https://www.liwenzhou.com/posts/Go/08_map/
 https://www.liwenzhou.com/posts/Go/go_menu/
+
+## tip
+
+Go 语言中禁止循环引用包
+

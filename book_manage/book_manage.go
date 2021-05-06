@@ -10,6 +10,17 @@ import (
 	"strings"
 )
 
+/**
+init() 方法不能手动调用
+只有在其他包中导入当前包时自动调用
+没有入参 没有出参
+*/
+func init() {
+	fmt.Println("初始化图书档案")
+	readFileToArray()
+	printBookList(bookList)
+}
+
 type Book struct {
 	bookName    string
 	bookCode    string
@@ -34,7 +45,7 @@ var (
 )
 
 func DataPanel() {
-	readFileToArray()
+	// readFileToArray()
 	for {
 		fmt.Print(getPanelString())
 		fmt.Print("请输入指令：")

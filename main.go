@@ -3,9 +3,11 @@ package main
 import (
 	"studygo/array_demo"
 	"studygo/closure_demo"
-	"studygo/interface_demo"
 	"studygo/map_demo"
+	"studygo/package_demo"
 	"studygo/slice_demo"
+	// interface_demo "github.com/morningcat2018/studygo/interface_demo" 自定义导入 即给导入的包起别名
+	// _ "xxx/yyy" 匿名导入 不使用包中的模块 例如 mysql 只使用了 init() 方法
 )
 
 func main() {
@@ -24,7 +26,8 @@ func main() {
 	// struct_demo.StructDemo10()
 	// interface_demo.InterfaceDemo1()
 	// interface_demo.BlankInterfaceDemo2("hello", "world")
-	interface_demo.BlankInterfaceDemo4()
+	// interface_demo.BlankInterfaceDemo4()
 
 	// book_manage.DataPanel()
+	package_demo.PackageDemo0()
 }
