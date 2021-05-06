@@ -2,8 +2,8 @@ package main
 
 import (
 	"studygo/array_demo"
-	"studygo/book_manage"
 	"studygo/closure_demo"
+	"studygo/interface_demo"
 	"studygo/map_demo"
 	"studygo/slice_demo"
 )
@@ -24,7 +24,7 @@ func main() {
 	// struct_demo.StructDemo10()
 	// interface_demo.InterfaceDemo1()
 	// interface_demo.BlankInterfaceDemo2("hello", "world")
-	// interface_demo.BlankInterfaceDemo3()
+	interface_demo.BlankInterfaceDemo4()
 
-	book_manage.DataPanel()
+	// book_manage.DataPanel()
 }
