@@ -3,7 +3,7 @@ package package_demo
 import (
 	. "fmt"
 	_ "studygo/book_manage"
-	ind "studygo/interface_demo"
+	ind "studygo/interface_demo" // 导入的包起别名
 )
 
 var x = 100
