@@ -31,5 +31,5 @@ func main() {
 	// book_manage.DataPanel()
 	//package_demo.PackageDemo0()
 
-	channel_demo.ChanDemo()
+	channel_demo.ChanDemo2()
 }
