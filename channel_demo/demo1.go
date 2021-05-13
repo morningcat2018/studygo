@@ -57,11 +57,11 @@ F1:
 }
 
 func ChanDemo2() {
-	ctx, cancel := context.WithCancel(context.Background())
+	ctx, cancel := context.WithCancel(context.Background()) // context
 	wait.Add(1)
 	go f2(ctx)
 	time.Sleep(time.Second * 5)
-	cancel() // 发出通知
+	cancel() // 发出通知 -> 通知子 goroutine 结束
 	wait.Wait()
 	fmt.Println("main over")
 }
