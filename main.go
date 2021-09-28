@@ -2,9 +2,9 @@ package main
 
 import (
 	"studygo/array_demo"
-	"studygo/channel_demo"
 	"studygo/closure_demo"
 	"studygo/map_demo"
+	"studygo/mysql_db"
 	"studygo/slice_demo"
 	// interface_demo "github.com/morningcat2018/studygo/interface_demo" 自定义导入 即给导入的包起别名
 	// _ "xxx/yyy" 匿名导入 不使用包中的模块 例如 mysql 只使用了 init() 方法
@@ -31,5 +31,7 @@ func main() {
 	// book_manage.DataPanel()
 	//package_demo.PackageDemo0()
 
-	channel_demo.ChanDemo2()
+	//channel_demo.ChanDemo2()
+
+	mysql_db.DbMain()
 }

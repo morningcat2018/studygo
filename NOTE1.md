@@ -2,6 +2,7 @@
 ## Go Setting
 
 GOPATH -> ~/go/
+
 GOROOT -> /usr/local/go/
 
 ## go version
@@ -32,11 +33,13 @@ go version go1.16.2 darwin/amd64
 > go env -w GOPROXY=https://goproxy.cn
 
 // go env -w GOPROXY=https://goproxy.io
+
 // export GOPROXY=https://goproxy.io
 
 ---
 
 > go get github.com/go-sql-driver/mysql
+
 // cd $GOPATH/pkg/mod
 
 ---
