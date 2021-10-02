@@ -28,17 +28,3 @@ make也是用于内存分配的，区别于new
 因为这三种类型就是引用类型，所以就没有必要返回他们的指针了
 https://www.liwenzhou.com/posts/Go/07_pointer/
 */
-
-// https://www.liwenzhou.com/posts/Go/08_map/
-func PointerDemo3() {
-	// map
-	var myMap map[string]int = make(map[string]int)
-	myMap["x"] = 1
-	myMap["x"] = 2
-	myMap["y"] = 3
-	fmt.Println(myMap)
-}
-
-func PointerDemo4() {
-	// chan
-}
