@@ -1,6 +1,9 @@
-package func_demo
+package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /*
 你有50枚金币，需要分配给以下几个人：Matthew,Sarah,Augustus,Heidi,Emilie,Peter,Giana,Adriano,Aaron,Elizabeth。
@@ -20,12 +23,15 @@ var (
 	distribution = make(map[string]int, len(users))
 )
 
-func Demo5Main() {
-	left := dispatchCoin()
+func TestCoins(t *testing.T) {
+	left := dispatchCoin(0)
 	fmt.Println("剩下：", left)
 }
 
-func dispatchCoin() int {
+func dispatchCoin(coinsValue int) int {
+	if coinsValue > 0 {
+		coins = coinsValue
+	}
 	for _, name := range users {
 		coin := calCoin(name)
 		distribution[name] = coin
