@@ -4,11 +4,12 @@ import (
 	"context"
 	"fmt"
 	"sync"
+	"testing"
 	"time"
 )
 
 var wait sync.WaitGroup
-var exitChan = make(chan bool)
+var pipe chan bool = make(chan bool)
 
 func f1() {
 	defer wait.Done() // -1
@@ -17,7 +18,7 @@ F1:
 		fmt.Println("hello world")
 		time.Sleep(time.Millisecond * 500)
 		select {
-		case <-exitChan:
+		case <-pipe:
 			break F1
 		default:
 			// nothing to do
@@ -27,11 +28,11 @@ F1:
 	time.Sleep(time.Second * 2)
 }
 
-func ChanDemo() {
+func TestChan1(t *testing.T) {
 	wait.Add(1)
 	go f1()
 	time.Sleep(time.Second * 5)
-	exitChan <- true // 发送通知
+	pipe <- true // 发送通知
 	wait.Wait()
 	fmt.Println("main over")
 }
@@ -56,7 +57,7 @@ F1:
 	time.Sleep(time.Second * 2)
 }
 
-func ChanDemo2() {
+func TestChan2(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background()) // context
 	wait.Add(1)
 	go f2(ctx)
