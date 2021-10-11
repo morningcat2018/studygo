@@ -1,20 +1,23 @@
 package interface_demo
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 // 	定义接口
 type speaker interface {
 	speak() // 只要实现了 speak 方法的变量都是 speaker 类型
 }
 
-type dog struct{}
-type cat struct{}
+type dog struct{ name string }
+type cat struct{ age int }
 
 func (d dog) speak() {
-	fmt.Println("wang wang wang...")
+	fmt.Println(d.name, ":汪汪汪")
 }
 func (c cat) speak() {
-	fmt.Println("miao miao miao...")
+	fmt.Println("喵喵喵", c.age)
 }
 
 // 使用接口
@@ -23,13 +26,16 @@ func call(sp speaker) {
 }
 
 // 调用接口方法
-func InterfaceDemo1() {
+func TestInterfaceDemo1(t *testing.T) {
 	var c1 cat
-	var d1 dog
+	c1.age = 12
 	call(c1)
+
+	var d1 dog
+	d1.name = "dico"
 	call(d1)
 
 	var sp speaker
 	sp = c1
-	fmt.Println(sp)
+	sp.speak()
 }
