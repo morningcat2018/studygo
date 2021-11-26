@@ -1,6 +1,9 @@
 package main
 
-import "studygo/struct_demo"
+import (
+	"fmt"
+	"studygo/bitmap"
+)
 
 func main() {
 	// fmt.Println("Hello world")
@@ -26,6 +29,16 @@ func main() {
 	//channel_demo.ChanDemo2()
 
 	//mysql_db.DbMain()
-	struct_demo.Main()
+	//struct_demo.Main()
 
+	TestBitMap()
+
+}
+
+func TestBitMap() {
+	bitMap := bitmap.New(0)
+	bitMap.Set(1000)
+	bitMap.Set(10001)
+	fmt.Println(bitMap.Get(1001))
+	fmt.Println(bitMap.Get(10001))
 }
