@@ -79,7 +79,7 @@ func (wsConn *wsConnection) procLoop() {
 	// 启动一个gouroutine发送心跳
 	go func() {
 		for {
-			time.Sleep(2 * time.Second)
+			time.Sleep(12 * time.Second)
 			if err := wsConn.wsWrite(websocket.TextMessage, []byte("heartbeat from server")); err != nil {
 				fmt.Println("heartbeat fail")
 				wsConn.wsClose()
