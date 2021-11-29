@@ -31,7 +31,9 @@ func main() {
 	//mysql_db.DbMain()
 	//struct_demo.Main()
 
-	TestBitMap()
+	//TestBitMap()
+
+	//cpu_demo.CpuDemo()
 
 }
 
