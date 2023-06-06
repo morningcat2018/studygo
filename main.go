@@ -3,12 +3,13 @@ package main
 import (
 	"fmt"
 	"studygo/bitmap"
+	"studygo/time_demo"
 )
 
 func main() {
 	// fmt.Println("Hello world")
 	// time_demo.TimeFormat()
-	// time_demo.Time2()
+	time_demo.Time2()
 	// base.StringDemo5()
 	//closure_demo.TestClosure3()
 	//array_demo.ArrayDemo8()
